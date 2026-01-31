@@ -1,0 +1,60 @@
+.galeria-categoria-zapitilla {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #585758;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.galeria-categoria-zapitilla:hover {
+  transform: scale(1.05);
+}
+
+.galeria-categoria-zapitilla img {
+  width: 5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.galeria-categoria-zapitilla img:hover {
+  transform: scale(1.1);
+}
+
+.galeria-categoria-zapitilla-nombre {
+  font-size: 18px;
+  font-weight: bold;
+  color: #585758;
+  margin: 10px;
+}
+
+.galeria-categoria-zapitilla-descripcion {
+  font-size: 14px;
+  color: #585758;
+  margin: 10px 0;
+}
+
+.galeria-categoria-zapitilla-precio {
+  font-size: 24px;
+  color: #e91e63;
+  margin: 20px 0;
+}
+
+.galeria-categoria-zapitilla-boton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #585758;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.galeria-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
