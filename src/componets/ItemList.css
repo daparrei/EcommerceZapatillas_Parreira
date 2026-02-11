@@ -1,0 +1,29 @@
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* Tablet */
+@media (max-width: 990px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+}
+
+.galeria-categoria {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
