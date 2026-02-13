@@ -2,13 +2,16 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductsById } from "../data/api-productos.js";
 import ItemCount from "./ItemCount.jsx";
+import { useContext } from "react";
+import { CarContext } from "../context/CarContext.jsx";
+
 
 
 const ItemDetail = () => {
   const { id } = useParams();
-
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { addToCart } = useContext(CarContext); 
   
   useEffect(() => {
     setLoading(true);
@@ -26,9 +29,9 @@ const ItemDetail = () => {
   }, [id]);
 
   const handleAddToCart = (cantidad) => {
-    console.log("Producto:", product);
-    console.log("Cantidad:", cantidad);
-  };
+    const itemToAdd = { ...product, cantidad };
+    addToCart(itemToAdd);
+    };
 
   if (loading) return <p>Cargando producto...</p>;
   if (!product) return <p>No existe el producto</p>;

@@ -1,3 +1,18 @@
+Entrega Final
+
+Agrego informacion de contexto de CarContext[Done]
+
+Agrego Carrito de compra [Done]
+
+Agrego CarWidget con informacion de las cantidades compradas [Done]
+
+Agregar componente para menejar el stock por talle.  []
+     Modificar ItemDetail
+
+Sacar estilos de los componentes (ItemDetail, etc) []
+
+
+
 Entrega 2: Navega las rutas
 
 Implementa una herramienta de routing, la cual permitirá navegar a través de las diferentes vistas para tu tienda: catálogo principal de productos, catálogo de productos filtrados por categorías, y vista en detalle de un producto. Crea la funcionalidad necesaria para que los usuarios puedan:
