@@ -1,5 +1,8 @@
 import { useContext } from "react";
 import { CarContext } from "../context/CarContext.jsx";
+import { Link } from "react-router-dom";
+import "./Cart.css";
+
 
 
 const Cart = () => {
@@ -10,8 +13,12 @@ const Cart = () => {
         <div>
             <h2>Carrito de Compras</h2>
             {cart.length === 0 ? (
-                <p>El carrito está vacío.</p>
-            ) : (   
+                <div>
+                    <p>El carrito está vacío.</p>
+                    <Link to="/" className="link-button">Volver al inicio</Link> 
+                </div>
+            )
+               : (   
                 <div style={{ maxWidth: 800, margin: "0 auto" }}>
                     {cart.map((item) => (      
                         <div key={item.id} style={
@@ -25,9 +32,10 @@ const Cart = () => {
                             <img src={`/${item.imagen}`} alt={item.nombre} style={{ width: "50px" }} />
                             <p>{item.nombre} </p>
                             <p>Cantidad: {item.cantidad}</p>
+                            <p>Talle: {item.talle}</p>
                             <p>Precio U: ${item.precio}</p>
                             <p>Precio Total: ${item.precio * item.cantidad}</p>
-                            <button onClick={() => removeFromCart(item.id)} style={{ marginLeft: "10px" }}>
+                            <button onClick={() => removeFromCart(item.id,item.talle)} style={{ marginLeft: "10px" }}>
                                 Eliminar
                             </button>
                         </div>

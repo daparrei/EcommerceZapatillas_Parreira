@@ -1,0 +1,35 @@
+.size-selector {
+  margin-top: 20px;
+}
+
+.size-title {
+  margin-bottom: 10px;
+}
+
+.size-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.size-button {
+  padding: 8px 12px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.size-button:hover {
+  background-color: #f0f0f0;
+}
+
+.size-button.selected {
+  background-color: black;
+  color: white;
+}
+
+.size-button.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
