@@ -5,6 +5,8 @@ import ItemCount from "./ItemCount.jsx";
 import { useContext } from "react";
 import SizeSelector from "./SizeSelector.jsx";
 import { CarContext } from "../context/CarContext.jsx";
+import { Link } from "react-router-dom";
+
 
 
 
@@ -13,6 +15,7 @@ const ItemDetail = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectedSize, setSelectedSize] = useState(null);
+  const [added, setAdded] = useState(false);
   const { addToCart } = useContext(CarContext); 
   
   useEffect(() => {
@@ -30,6 +33,10 @@ const ItemDetail = () => {
       });
   }, [id]);
 
+  useEffect(() => {
+    setAdded(false);
+  }, [selectedSize]);
+
    const handleAddToCart = (cantidad) => {
     if (!selectedSize) {
       alert("Seleccioná un talle primero");
@@ -43,6 +50,7 @@ const ItemDetail = () => {
     };
 
     addToCart(itemToAdd);
+    setAdded(true);
   };
 
   if (loading) return <p>Cargando producto...</p>;
@@ -71,13 +79,30 @@ const ItemDetail = () => {
       />
 
       {/* Contador solo si hay talle seleccionado */}
-      {selectedSize && (
+      {selectedSize && !added && (
         <ItemCount
           key={selectedSize}
           stock={product.stockPorTalle[selectedSize]}
           initial={1}
           onAdd={handleAddToCart}
         />
+      )}
+
+      {selectedSize && added && (
+        <Link
+          to="/cart"
+          style={{
+            display: "inline-block",
+            marginTop: "15px",
+            padding: "10px 20px",
+            backgroundColor: "black",
+            color: "white",
+            textDecoration: "none",
+            borderRadius: "5px"
+          }}
+        >
+          Ir al carrito
+        </Link>
       )}
     </div>
   );
