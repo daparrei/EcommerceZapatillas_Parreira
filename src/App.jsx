@@ -8,6 +8,8 @@ import NotFound from './componets/NotFound.jsx';
 import ItemDetail from './componets/ItemDetail.jsx';
 import { CarProvider } from './context/CarContext.jsx';
 import Cart from './componets/Cart.jsx';
+import CheckOut from './componets/CheckOut.jsx';
+
 
 
 
@@ -25,6 +27,7 @@ function App() {
             <Route path='/categoria/:category' element={<ItemListContainer greeting={"Bienvenido a ZAPATILLAS QUILMES"} />} />
             <Route path='/cart' element={<Cart />} />
             <Route path="*" element={<NotFound />} />
+            <Route path='/checkout' element={<CheckOut />} />
         </Routes>
       </CarProvider>
     </BrowserRouter>

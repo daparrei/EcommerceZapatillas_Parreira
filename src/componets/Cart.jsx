@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { CarContext } from "../context/CarContext.jsx";
 import { Link } from "react-router-dom";
 import "./Cart.css";
+import CheckOut from "./CheckOut.jsx";
 
 
 
@@ -46,6 +47,9 @@ const Cart = () => {
                         <button onClick={clearCart} style={{ marginTop: "10px" }}>
                             Vaciar Carrito
                         </button>
+                        <Link to="/checkout" className="link-button" style={{ marginLeft: "10px" }}>
+                            Finalizar Compra
+                        </Link>
                 </div>
             )}  
         </div>
