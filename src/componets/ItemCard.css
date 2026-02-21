@@ -4,15 +4,16 @@
   align-items: center;
   text-align: center;
   background-color: #fff;
-  padding: 10px;
+  padding: 15px;
   border-radius: 8px;
-  border: 1px solid #585758;
-  transition: transform 0.3s ease;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
 }
 
 .galeria-categoria-zapitilla:hover {
-  transform: scale(1.05);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .galeria-categoria-zapitilla img {
@@ -22,39 +23,57 @@
 }
 
 .galeria-categoria-zapitilla img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .galeria-categoria-zapitilla-nombre {
   font-size: 18px;
   font-weight: bold;
   color: #585758;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .galeria-categoria-zapitilla-descripcion {
   font-size: 14px;
-  color: #585758;
-  margin: 10px 0;
+  color: #666;
+  margin: 5px 0;
 }
 
 .galeria-categoria-zapitilla-precio {
   font-size: 24px;
   color: #e91e63;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .galeria-categoria-zapitilla-boton {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #585758;
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
+    margin-top: 20px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.galeria-categoria-zapitilla-boton:hover {
+  background-color: #3f3e3f;
+}
+
+.galeria-categoria-zapitilla-boton:active {
+  transform: scale(0.98);
 }
 
 .galeria-grid {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.galeria-categoria-zapitilla-boton {
+  width: 100%;
+  text-align: center;
 }

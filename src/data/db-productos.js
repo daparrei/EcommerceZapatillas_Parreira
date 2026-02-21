@@ -133,16 +133,6 @@ const updateProductStockPorTalle = async (id, talle, cantidad) => {
     }   
 };
 
-// Funcion para subir la ORDER a la base de datos, se puede crear una nueva colección llamada "orders" y agregar un nuevo documento con los detalles de la orden, incluyendo los productos comprados, el total de la compra y los datos del cliente.
-const addOrder = async (orderData) => {
-    try {
-        const collectionRef = collection(db, "orders"); 
-        const docRef = await addDoc(collectionRef, orderData);
-        return { id: docRef.id, ...orderData };
-    } catch (error) {
-        console.error("Error adding order:", error);
-        throw error;    
-    }
-}
 
-export { getProducts,getProductsById, addProduct, deleteProduct, updateProduct, updateProductStockPorTalle, getProductsByCategory, getUniqueCategories, addOrder };
+
+export { getProducts,getProductsById, addProduct, deleteProduct, updateProduct, updateProductStockPorTalle, getProductsByCategory, getUniqueCategories };

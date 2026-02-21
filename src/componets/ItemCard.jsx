@@ -25,15 +25,14 @@ const ItemCard = ({ product }) => {
         {product.descripcion}
       </p>
 
-      <Link to={`/product/${product.id}`}>
-      <button
+      <Link
+        to={`/product/${product.id}`}
         className="galeria-categoria-zapitilla-boton"
         onClick={handleComprar}
-      >
-       COMPRAR
-      </button>
+        >
+        Ver detalles
       </Link>
-      </div>      
+    </div>      
   );
 };
 

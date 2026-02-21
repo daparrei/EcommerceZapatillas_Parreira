@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./ItemCount.css";
 
 const ItemCount = ({ stock = 10, initial = 1, onAdd }) => {
   const [count, setCount] = useState(initial);
@@ -12,19 +13,35 @@ const ItemCount = ({ stock = 10, initial = 1, onAdd }) => {
   };
 
   return (
-    <div style={{ marginTop: 20 }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-        <button onClick={restar}>-</button>
-        <span>{count}</span>
-        <button onClick={sumar}>+</button>
+    <div className="itemcount-container">
+      
+      <div className="itemcount-controls">
+        <button 
+          onClick={restar} 
+          className="itemcount-btn"
+          disabled={count === 1}
+        >
+          -
+        </button>
+
+        <span className="itemcount-number">{count}</span>
+
+        <button 
+          onClick={sumar} 
+          className="itemcount-btn"
+          disabled={count === stock}
+        >
+          +
+        </button>
       </div>
 
       <button
-        style={{ marginTop: 10 }}
+        className="itemcount-add-btn"
         onClick={() => onAdd(count)}
       >
         Agregar al carrito
       </button>
+
     </div>
   );
 };

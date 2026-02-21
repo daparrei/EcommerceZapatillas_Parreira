@@ -1,0 +1,60 @@
+.itemcount-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.itemcount-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.itemcount-number {
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+.itemcount-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.itemcount-btn:hover {
+    background-color: #000;
+}
+
+.itemcount-btn:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.itemcount-add-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.itemcount-add-btn:hover {
+    background-color: #000;
+}
