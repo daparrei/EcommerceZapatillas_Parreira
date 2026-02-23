@@ -1,27 +1,14 @@
-import { useEffect, useState, useContext } from "react";
-import { useParams, Link } from "react-router-dom";
-import { getProductsById } from "../data/db-productos.js";
+import { useState, useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount.jsx";
 import SizeSelector from "./SizeSelector.jsx";
 import { CarContext } from "../context/CarContext.jsx";
 import "./ItemDetail.css";
 
-const ItemDetail = () => {
-  const { id } = useParams();
-  const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
+const ItemDetail = ({ product }) => {
   const [selectedSize, setSelectedSize] = useState(null);
   const [added, setAdded] = useState(false);
   const { addToCart } = useContext(CarContext);
-
-  useEffect(() => {
-    setLoading(true);
-
-    getProductsById(id)
-      .then((data) => setProduct(data))
-      .catch(() => console.log("No se pudo cargar el producto"))
-      .finally(() => setLoading(false));
-  }, [id]);
 
   useEffect(() => {
     setAdded(false);
@@ -43,12 +30,8 @@ const ItemDetail = () => {
     setAdded(true);
   };
 
-  if (loading) return <p className="itemdetail-loading">Cargando producto...</p>;
-  if (!product) return <p className="itemdetail-error">No existe el producto</p>;
-
   return (
     <div className="itemdetail-container">
-
       <div className="itemdetail-grid">
 
         {/* Columna izquierda - Imagen */}
@@ -68,7 +51,7 @@ const ItemDetail = () => {
           <h2 className="itemdetail-title">{product.nombre}</h2>
 
           <p className="itemdetail-price">
-            ${product.precio}
+            $ {product.precio.toLocaleString("es-AR")}
           </p>
 
           <p className="itemdetail-description">

@@ -5,7 +5,7 @@ import NavBar from './componets/NavBar.jsx'
 import ItemListContainer from './componets/ItemListContainer.jsx'
 import About from './componets/About.jsx'
 import NotFound from './componets/NotFound.jsx';
-import ItemDetail from './componets/ItemDetail.jsx';
+import ItemDetailContainer from './componets/ItemDetailContainer.jsx';
 import { CarProvider } from './context/CarContext.jsx';
 import Cart from './componets/Cart.jsx';
 import CheckOut from './componets/CheckOut.jsx';
@@ -23,7 +23,7 @@ function App() {
           <Routes> 
             <Route path='/' element={<ItemListContainer greeting={"Bienvenido a ZAPATILLAS QUILMES"} />} />
             <Route path='/about' element={ <About />} />
-            <Route path='/product/:id' element={<ItemDetail />} />
+            <Route path="/product/:id" element={<ItemDetailContainer />} />
             <Route path='/categoria/:category' element={<ItemListContainer greeting={"Bienvenido a ZAPATILLAS QUILMES"} />} />
             <Route path='/cart' element={<Cart />} />
             <Route path="*" element={<NotFound />} />

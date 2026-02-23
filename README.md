@@ -61,7 +61,7 @@ Historial de desarrollo
 
 4. Agregar componente para menejar el stock por talle.  [Done]
 
-5. Sacar estilos de los componentes (ItemDetail, etc) []
+5. Sacar estilos de los componentes (ItemDetail, etc) [Done]
 
 
 Entrega final:
@@ -75,7 +75,7 @@ Desarrollar el front-end de una webapp de tipo e-commerce con React.
 Incorporar Firestore como base de datos.
 
 Requisitos
-Listado y Detalle de productos
+Listado y Detalle de productos [DONE]
 Generación dinámica del listado de productos y acceso a la vista en detalle de cada uno (ItemListContainer y ItemDetailContainer) [DONE]
 
 Separación en componentes contenedores y de presentación para separar responsabilidad de tareas en los mismos. (ItemListContainer
@@ -99,7 +99,7 @@ Mostrar el contenido del carrito dentro del componente Cart (productos, cantidad
 Mostrar un icono/imágen del carrito en el componente CartWidget. Debe mostrar el total de unidades agregadas al context [DONE]
 
 Firebase
-Implementación de Firestore como base de datos.
+Implementación de Firestore como base de datos.[DONE]
 
 Creación de una colección donde se almacene la información de todos los productos del e-commerce, y realizar las consultas desde React para mostrarlos en la app. [DONE]
 
@@ -108,37 +108,32 @@ Generación de un documento en Firestore al confirmar una compra, registrando lo
 Experiencia de usuario
 Utilizar renderizado condicional para mostrar loaders y mensajes condicionales, como “producto sin stock”, “carrito vacío”, etc. [PENDING]
 
-Como finalización de la experiencia de usuario, brindarle al usuario el id (o detalles adicionales) de la orden generada en Firestore [PENDING]
+Como finalización de la experiencia de usuario, brindarle al usuario el id (o detalles adicionales) de la orden generada en Firestore [DONE]
 
-Buenas prácticas y convenciones
-Respetar las convenciones y consignas del curso para los nombres de variables funciones, componentes. eventos, y arquitectura de carpetas/archivos.
+Respetar las convenciones y consignas del curso para los nombres de variables funciones, componentes. eventos, y arquitectura de carpetas/archivos.[DONE]
 
-Crear un documento en formato markdown documentando brevemente el proyecto
+Crear un documento en formato markdown documentando brevemente el proyecto [DONE]
 
 Estructura de Componentes recomendada
-App
+App [DONE]
 
-NavBar
-CartWidget
-
-
-ItemListContainer
-ItemList
-Item
+NavBar [DONE]
+CartWidget [DONE]
 
 
+ItemListContainer [DONE]
+ItemList [DONE]
+Item [DONE]
 
-ItemDetailContainer
-ItemDetail
-ItemCount
+ItemDetailContainer [DONE]
+ItemDetail [DONE]
+ItemCount [DONE]
+
+Cart [DONE]
+CartItem [DONE]
 
 
-
-Cart
-CartItem
-
-
-CheckoutForm
+CheckoutForm [DONE]
 
 Recomendaciones
 Asegúrate de que tu repositorio no presenta errores y es público. Te aconsejamos clonarlo y realizar una instalación de cero para testear tu app y detectar posibles errores.

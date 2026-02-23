@@ -46,13 +46,6 @@
     color: #555;
 }
 
-/* Estados */
-.itemdetail-loading,
-.itemdetail-error {
-    text-align: center;
-    margin-top: 40px;
-}
-
 /* Botón unificado */
 .primary-button {
     margin-top: 20px;
@@ -63,13 +56,13 @@
     cursor: pointer;
     text-decoration: none;
     transition: background 0.2s ease;
-    background-color: #333;
+    background-color: #585758; /* coherente con tu proyecto */
     color: white;
     text-align: center;
 }
 
 .primary-button:hover {
-    background-color: #000;
+    background-color: #3f3e3f;
 }
 
 /* RESPONSIVE */
