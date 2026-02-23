@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CarContext } from "../context/CarContext.jsx";
 import { Link } from "react-router-dom";
+import ItemCart from "./ItemCart.jsx";
 import "./Cart.css";
 
 const Cart = () => {
@@ -22,27 +23,7 @@ const Cart = () => {
                 <div className="cart-content">
                     
                     {cart.map((item) => (
-                        <div key={`${item.id}-${item.talle}`} className="cart-item">
-                            
-                            <img 
-                                src={`/${item.imagen}`} 
-                                alt={item.nombre} 
-                                className="cart-image"
-                            />
-
-                            <p>{item.nombre}</p>
-                            <p>Cantidad: {item.cantidad}</p>
-                            <p>Talle: {item.talle}</p>
-                            <p>Precio U: ${item.precio}</p>
-                            <p>Precio Total: ${item.precio * item.cantidad}</p>
-
-                            <button 
-                                onClick={() => removeFromCart(item.id, item.talle)}
-                                className="cart-remove-btn"
-                            >
-                                Eliminar
-                            </button>
-                        </div>
+                        <ItemCart key={`${item.id}-${item.talle}`} item={item} />
                     ))}
 
                     <p className="cart-total">

@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 
 const ItemCard = ({ product }) => {
 
-  const handleComprar = () => {
-    localStorage.setItem("productoSeleccionado", product.id);
-  };
 
   return (
     <div className="galeria-categoria-zapitilla">
@@ -28,7 +25,6 @@ const ItemCard = ({ product }) => {
       <Link
         to={`/product/${product.id}`}
         className="galeria-categoria-zapitilla-boton"
-        onClick={handleComprar}
         >
         Ver detalles
       </Link>
